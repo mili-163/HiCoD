@@ -97,15 +97,6 @@ HiCoD/
 pip install torch transformers numpy
 ```
 
-### Run Training
-```bash
-# Basic training
-python train.py
-
-# Training with specific parameters
-python run.py --model hicod --dataset mosi --seeds 1111 2222 3333 --mr 0.1
-```
-
 ### Validate Components
 ```bash
 # Validate individual components
@@ -115,28 +106,6 @@ python validate_prompt_distillation.py  # Validate multi-level distillation comp
 
 # Validate complete pipeline
 python validate_complete_pipeline.py    # Validate entire training pipeline
-```
-
-### Comprehensive Experiments
-```bash
-# Run comprehensive experiments (both fixed and random missing scenarios)
-python experiment_comprehensive.py --dataset mosi --seeds 1111 2222 3333
-
-# Run only fixed missing modality experiments
-python experiment_comprehensive.py --dataset mosi --scenario fixed --seeds 1111 2222 3333
-
-# Run only random missing modality experiments
-python experiment_comprehensive.py --dataset mosi --scenario random --seeds 1111 2222 3333
-```
-
-### Individual Experiments
-```bash
-# Fixed missing modality scenarios
-python run.py --model hicod --dataset mosi --scenario fixed --missing_modalities text
-python run.py --model hicod --dataset mosi --scenario fixed --missing_modalities text audio
-
-# Random missing modality scenarios
-python run.py --model hicod --dataset mosi --scenario random --mr 0.3
 ```
 
 ## Loss Functions
